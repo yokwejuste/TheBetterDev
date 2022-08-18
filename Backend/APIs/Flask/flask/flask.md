@@ -3,12 +3,12 @@
 - [What is a Flask](#what-is-a-flask)
 - [Installing Flask](#installing-flask)
 - [Simple APIs with Flask](#simple-apis-with-flask)
-    - [Post](#post)
-    - [Get](#get)
-    - [Put](#put)
-    - [Delete](#delete)
-    - [Patch](#patch)
-    - [Workshop]()
+  - [Get](#get)
+  - [Post](#post)
+  - [Put](#put)
+  - [Delete](#delete)
+  - [Patch](#patch)
+  - [Workshop]()
 
 ## What is Flask
 Python being a very popular language used in many fields including web development, it is also used in many other fields.
@@ -51,4 +51,87 @@ Now we're sure the application is running, and we can test it.
     curl localhost:5000
     Hello, It's Yokejuste!
 ```
-We can now get things more serious than before. We dive into the next section.
+We can now get things more serious than before. We dive into the next section. Before making use of the different methods
+of the Flask framework, we need to create a database schema and liking it to our database. The choice of the database is
+sqlite3.
+
+The following code is with respect to a library to get or put a put, nothing serious just some samples.
+
+
+The code becomes:
+
+* Part One: (app definition)
+```python
+    from flask import Flask
+    from flask_sqlalchemy import SQLAlchemy
+    from flask_marshmallow import Marshmallow
+    from flask_cors import CORS
+    
+    app = Flask(__name__)
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.sqlite3'
+    app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+    db = SQLAlchemy(app)
+    CORS(app)
+```
+  Let breaks it down:
+    
+  - `app = Flask(__name__)` creates an instance of the flask web application.
+  - `app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.sqlite'` sets the database location.
+  - `app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False` disables the modification tracking.
+  - `db = SQLAlchemy(app)` creates an instance of the SQLAlchemy database.
+  - `CORS(app)` enables CORS.
+
+* Part Two: (database schema)
+```python
+class Books(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(80), nullable=False)
+    description = db.Column(db.String(120), unique=True, nullable=False)
+    def __repr__(self):
+        return '<Book %r>' % self.name
+    
+    def create(self):
+        db.session.add(self)
+        db.session.commit()
+    
+    def __init__(self):
+        self.name = name
+        self.description = description
+
+db.create_all()
+```
+  - db.create_all() makes the application create all the defined tables in the database.
+
+  - db.session.add(self) adds the Todo instance into the SQLAlchemy database connection session.
+
+  - db.session.commit() executes all the database operations that are available in the session.
+
+### The GET method
+The GET method is to run queries from the database requesting for contents from there.
+- All db content query
+  ```python
+  @app.route('/books/')
+  def get_books():
+      books = Books.query.all()
+      output = []
+      for book in books:
+        book_data = {'name': book.name, 'description': book.description}
+        output.append(book_data)
+      return {'drinks': output}
+  ```
+- Single element query
+  ```python
+  @app.route('books/<id>')
+  def get_book(id):
+      book = Books.query.get_or_404(id)
+      return {'name': book.name, 'description': book.description }
+  ```
+
+### The POST method
+
+<p align="center"><a href="../introduction/introduction.md#introduction">&laquo; &nbsp;&nbsp; 
+Previous
+</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<a href="#">Next &nbsp;&nbsp; &raquo;</a></p>
+<br><br>
+
