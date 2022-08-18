@@ -56,6 +56,16 @@ Assuming you have python installed, you can create a virtual environment.
   ```bash
   pip install -r requirements.txt
   ```
+ 
+<!-- 
+<div style="width: 100px" dir="ltr">  
+<a href="../README.md">&laquo; Previous</a> 
+</div>
 
-<a align="left" href="../README.md">&laquo; Previous</a> <a align="right" href="../flask/flask.md#getting_started_with_flask">Next &raquo;</a>
+
+<div style="width: 100px" dir="rtl">
+<a href="../flask/flask.md#getting_started_with_flask">&laquo; Next</a>
+</div>
+ -->
+<p align="center"><a href="../README.md">&laquo; Previous</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="../flask/flask.md#getting_started_with_flask">Next &raquo;</a></p>
 <br><br>
