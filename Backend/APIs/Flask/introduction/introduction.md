@@ -57,5 +57,5 @@ Assuming you have python installed, you can create a virtual environment.
   pip install -r requirements.txt
   ```
 
-<a href="../README.md" style="float: left">&laquo; Previous</a> <a href="#" style="float: right">Next &raquo;</a>
+<p align="left"><a href="../README.md" style="float: left">&laquo; Previous</a></p> <p align="right"><a href="#" style="float: right">Next &raquo;</a></p>
 <br><br>
