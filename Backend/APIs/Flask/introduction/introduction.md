@@ -21,7 +21,7 @@ API is a set of rules that defines how an application communicates with another 
 be a set of endpoints that define how to interact with another application. Several companies currently use APIs to build
 their own applications. Some of the most popular APIs are: 
 - [Stackoverflow](https://api.stackexchange.com/)`public`
-- [Github]('https://api.github.com/')`private`
+- [Github](https://api.github.com/)`private`
 - [Facebook](https://developers.facebook.com/docs/graph-api/overview)`public`.
 
 [Stackoverflow](https://stackoverflow.com) will be our choice for getting how an open API works. I'm using each for
@@ -57,15 +57,9 @@ Assuming you have python installed, you can create a virtual environment.
   pip install -r requirements.txt
   ```
  
-<!-- 
-<div style="width: 100px" dir="ltr">  
-<a href="../README.md">&laquo; Previous</a> 
-</div>
 
-
-<div style="width: 100px" dir="rtl">
-<a href="../flask/flask.md#getting_started_with_flask">&laquo; Next</a>
-</div>
- -->
-<p align="center"><a href="../README.md">&laquo; Previous</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="../flask/flask.md#getting_started_with_flask">Next &raquo;</a></p>
+<p align="center"><a href="../README.md">&laquo;
+Previous
+</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<a href="../flask/flask.md#getting_started_with_flask">Next &raquo;</a></p>
 <br><br>
