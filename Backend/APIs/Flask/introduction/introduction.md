@@ -57,5 +57,5 @@ Assuming you have python installed, you can create a virtual environment.
   pip install -r requirements.txt
   ```
 
-<p align="left"><a href="../README.md">&laquo; Previous</a></p> <p align="right"><a href="../flask/flask.md#getting_started_with_flask">Next &raquo;</a></p>
+<a align="left" href="../README.md">&laquo; Previous</a> <a align="right" href="../flask/flask.md#getting_started_with_flask">Next &raquo;</a>
 <br><br>
