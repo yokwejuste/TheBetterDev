@@ -55,7 +55,7 @@ Before getting deep into stuffs lets get the table of content we'll follow up du
         - [Nested Fields](#nested-fields)
     - [WorkShop]()
 
-<a href="./introduction/introduction.md" style="float: right">Next &raquo;</a>
+<a href="./introduction/introduction.md" class="float-md-right color-bg-success-emphasis">Next &raquo;</a>
 <br/><br/>
 &nbsp;
 Cheers 🍻!

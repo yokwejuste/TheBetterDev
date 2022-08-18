@@ -28,5 +28,27 @@ As all safe or legal python packages, to install Flask you need to install the [
 Let's start building a simple API with Flask just very basic.
 
 🤔 What ingredients are needed to build a Flask application and get it running?
-<script src="https://gist.github.com/yokwejuste/cf2f5d327304151b3abb7a27953e1152.js"></script>
+- The flask package imported
+- A function defining the scope of our application 
+- a route decorator for the function path 
+- The function `app.run()` is used to start the application 
 
+```python
+    from flask import Flask
+
+    app = Flask(__name__)
+
+    @app.route('/')
+    def hello_world():
+        return 'Hello, It\'s Yokejuste!'
+ 
+    if __name__== '__main__':
+      app.run(debug=True)
+```
+Now we're sure the application is running, and we can test it.
+
+```bash
+    curl localhost:5000
+    Hello, It's Yokejuste!
+```
+We can now get things more serious than before. We dive into the next section.
