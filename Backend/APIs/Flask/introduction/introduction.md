@@ -56,7 +56,6 @@ Assuming you have python installed, you can create a virtual environment.
   ```bash
   pip install -r requirements.txt
   ```
- 
 
 <p align="center"><a href="../README.md">&laquo;
 Previous
