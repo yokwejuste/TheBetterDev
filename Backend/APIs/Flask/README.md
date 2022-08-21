@@ -26,12 +26,11 @@ Before getting deep into stuffs lets get the table of content we'll follow up du
     - [What is a Flask](#what-is-a-flask)
     - [Installing Flask](#installing-flask)
     - [Simple APIs with Flask](#simple-apis-with-flask)
-      - [Get](#get)
-      - [Post](#post)
-      - [Put](#put)
-      - [Delete](#delete)
-      - [Patch](#patch)
-      - [Workshop]()
+        - [Post](#post)
+        - [Get](#get)
+        - [Put](#put)
+        - [Delete](#delete)
+        - [Workshop]()
 - [Powerful APIs with FlaskRESTful](#powerful-apis-with-flaskrestful)
     - [Installation](#installation)
     - [Simpliest REST API structure](#simpliest-rest-api-structure)
@@ -55,9 +54,9 @@ Before getting deep into stuffs lets get the table of content we'll follow up du
         - [Nested Fields](#nested-fields)
     - [WorkShop]()
 
-<p align="center">
-<a href="./introduction/introduction.md" class="float-md-right color-bg-success-emphasis">Next &raquo;</a></p>
-<br><br>
+<a href="./introduction/introduction.md" class="float-md-right color-bg-success-emphasis">Next &raquo;</a>
+<br/><br/>
+&nbsp;
 Cheers 🍻!
 
 Happy coding! 🚀

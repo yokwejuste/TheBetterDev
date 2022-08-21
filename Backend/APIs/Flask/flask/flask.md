@@ -7,7 +7,6 @@
   - [Post](#post)
   - [Put](#put)
   - [Delete](#delete)
-  - [Patch](#patch)
   - [Workshop]()
 
 ## What is Flask
@@ -128,7 +127,55 @@ The GET method is to run queries from the database requesting for contents from 
   ```
 
 ### The POST method
+The POST method is to add new contents to the database. The following code is an example of the POST method.
 
+```python
+@app.route('/books/', methods=['POST'])
+def add_book():
+    name = request.json['name']
+    description = request.json['description']
+    new_book = Books(name=name, description=description)
+    new_book.create()
+    return {'message': 'Book created successfully.'}, 201
+```
+### The PUT method(update)
+The PUT method is to update the contents of the database. The following code is an example of the PUT method. With this method,
+It is possible to update the contents of the database on a particular element.
+
+```python
+@app.route('/books/<id>', methods=['PUT'])
+def update_book(id):
+    book = Books.query.get_or_404(id)
+    name = request.json['name']
+    description = request.json['description']
+    book.name = name
+    book.description = description
+    db.session.commit()
+    return {'message': 'Book updated successfully.'}
+```
+
+### The DELETE method(delete)
+The DELETE method is to delete the contents of the database. The following code is an example of the DELETE method. With this method,
+It is possible to delete the contents of the database on a particular element.
+
+```python
+@app.route('/books/<id>', methods=['DELETE'])
+def delete_book(id):
+    book = Books.query.get_or_404(id)
+    db.session.delete(book)
+    db.session.commit()
+    return {'message': 'Book deleted successfully.'}
+```
+
+### Bonus:  The OPTIONS method
+The OPTIONS method is to allow the browser to make a request to the server without actually running the request.
+
+```python
+@app.route('/books/', methods=['OPTIONS'])
+def options():
+    return {'message': 'ok'}, 200, {'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Headers': 'Content-Type,Authorization,true'}
+```
+<br>
 <p align="center"><a href="../introduction/introduction.md#introduction">&laquo; &nbsp;&nbsp; 
 Previous
 </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
