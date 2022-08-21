@@ -175,6 +175,9 @@ The OPTIONS method is to allow the browser to make a request to the server witho
 def options():
     return {'message': 'ok'}, 200, {'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Headers': 'Content-Type,Authorization,true'}
 ```
+
+On what follows we'll see how to use the Flask framework to build a RESTful API. Thus using this framework in a more effective 
+way.
 <br>
 <p align="center"><a href="../introduction/introduction.md#introduction">&laquo; &nbsp;&nbsp; 
 Previous
