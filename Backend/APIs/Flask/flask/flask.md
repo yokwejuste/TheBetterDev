@@ -182,6 +182,6 @@ way.
 <p align="center"><a href="../introduction/introduction.md#introduction">&laquo; &nbsp;&nbsp; 
 Previous
 </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-<a href="#">Next &nbsp;&nbsp; &raquo;</a></p>
+<a href="../flaskRESTful/flaskrestful.md#powerful_apis_with_flask_restful">Next &nbsp;&nbsp; &raquo;</a></p>
 <br><br>
 
